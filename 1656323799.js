@@ -2,13 +2,13 @@ module.exports = {
 	async up(db, redis) {
 		try {
 			await db
-				.collection("albums")
+				.collection("1albums")
 				.updateOne(
 					{ artist: "The Beatles 222222" },
 					{ $set: { blacklisted: true } },
 				);
 			await db
-				.collection("albums")
+				.collection("1albums")
 				.updateOne(
 					{ artist: "The Doors2222222" },
 					{ $set: { stars: 5 } },

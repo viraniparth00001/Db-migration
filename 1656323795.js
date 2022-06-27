@@ -1,6 +1,7 @@
 module.exports = {
 	async up(db, redis) {
 		try {
+			console.log(db);
 			await db
 				.collection("albums")
 				.updateOne(
