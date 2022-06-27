@@ -4,13 +4,18 @@ module.exports = {
 			console.log(db);
 			await db
 				.collection("albums")
-				.updateOne(
+				.update(
 					{ artist: "The Beatles" },
-					{ $set: { blacklisted: true } },
+					{ $set: { blacklisted: true, artist: "The Beatles" } },
+					{ upsert: true, new: true },
 				);
 			await db
 				.collection("albums")
-				.updateOne({ artist: "The Doors" }, { $set: { stars: 5 } });
+				.update(
+					{ artist: "The Doors" },
+					{ $set: { stars: 5, artist: "The Doors" } },
+					{ upsert: true, new: true },
+				);
 		} finally {
 			//await session.endSession();
 		}
