@@ -5,13 +5,13 @@ module.exports = {
 				.collection("1albums")
 				.updateOne(
 					{ artist: "The Beatles 222222" },
-					{ $set: { blacklisted: true } },
+					{ $set: { blacklisted: false } },
 				);
 			await db
 				.collection("1albums")
 				.updateOne(
 					{ artist: "The Doors2222222" },
-					{ $set: { stars: 5 } },
+					{ $set: { stars: 6 } },
 				);
 		} finally {
 			//await session.endSession();
