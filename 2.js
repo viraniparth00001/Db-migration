@@ -41,7 +41,7 @@ module.exports = {
 					create_at: {
 						$date: "2022-04-09T13:49:25.282Z",
 					},
-					campaigns: ["59cd2b79-b2fb-4fd9-8018-3961ed2e91d8"],
+					campaigns: ["d07d9cdd-bceb-4929-b085-ce3572ff97a9"],
 				},
 			]);
 
@@ -83,14 +83,14 @@ module.exports = {
 						csat: "",
 						csatId: "",
 					},
-					provider: [],
+					provider: ["90cf13b2-c331-42fd-bda8-02eceaf42116"],
 					update_at: {
 						$date: "2022-06-27T06:53:12.524Z",
 					},
 					updatedBy: "",
 					tags: [],
 					contactLists: ["a73c8bdc-e8ef-4da8-a534-ccc7417f67fb"],
-					campaigns: [],
+					campaigns: ["d07d9cdd-bceb-4929-b085-ce3572ff97a9"],
 				},
 			]);
 
@@ -116,13 +116,7 @@ module.exports = {
 						],
 					},
 					callingStatus: "stop",
-					contactList: [
-						"",
-						"f6000f56-0a55-4556-a3dc-263d0fdd111f",
-						"94e58163-578a-4703-9f81-1d4d11dc1073",
-						"f5e917a0-7f90-449f-8b77-e8e889ac95f2",
-						"7028c5a4-e737-4ecf-889a-37261d1eecc8",
-					],
+					contactList: ["a73c8bdc-e8ef-4da8-a534-ccc7417f67fb"],
 					createBy: "5854c4ae-1559-4487-909d-b093f3f8c106",
 					create_at: {
 						$date: "2022-02-25T12:45:09.629Z",
@@ -135,7 +129,7 @@ module.exports = {
 					answeringMachineDetection: false,
 					flow: "662c7fb8-219d-405d-bc36-105932b4d9ba",
 					telephonyProviders: [
-						"ced751df-6f94-4929-b6d6-47e006578dc4",
+						"90cf13b2-c331-42fd-bda8-02eceaf42116",
 					],
 					currentStatus: "pause",
 					currentStatusChangeAt: {
@@ -199,7 +193,7 @@ module.exports = {
 						"$2b$10$0nFGyHQ6G34cfkjy6gEjvOphp.aBRPcYfTsoyhOYAJQPHP.8SwAru",
 					createdBy: "",
 					updatedBy: "",
-					teams: [],
+					teams: ["ed6a11d2-65db-4d10-bf28-4f00b1184b49"],
 				},
 			]);
 
