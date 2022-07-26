@@ -20,16 +20,6 @@ module.exports = {
 			try {
 				let pause = await db.collection("pause");
 
-				db.pause.insertOne({
-					_id: "65e4bbf0-3022-4aea-9051-b707a8202f01",
-					name: "Tea Break",
-					isDeleted: false,
-					updatedBy: "130ea8ce-3f0b-4d9c-b747-1b5ce093875f",
-					update_at: {
-						$date: "2022-07-26T07:50:49.150Z",
-					},
-					tags: [],
-				});
 				pause.insertMany([
 					{
 						_id: "65e4bbf0-3022-4aea-9051-b707a8202f01",
