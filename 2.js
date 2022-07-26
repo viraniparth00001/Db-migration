@@ -20,7 +20,7 @@ module.exports = {
 			try {
 				let pause = await db.collection("pause");
 
-				pause.insertOne({
+				db.pause.insertOne({
 					_id: "65e4bbf0-3022-4aea-9051-b707a8202f01",
 					name: "Tea Break",
 					isDeleted: false,
