@@ -1,6 +1,22 @@
 module.exports = {
 	async up(db, redis, tenantId = "") {
 		try {
+			let collections = [
+				"pause",
+				"despose",
+				"contactLists",
+				"teams",
+				"skill",
+				"skillType",
+			];
+
+			for (let index = 0; index < collections.length; index++) {
+				const element = collections[index];
+				try {
+					this.db.createCollection(element);
+				} catch (e) {}
+			}
+
 			db.pause.insertMany([
 				{
 					_id: "65e4bbf0-3022-4aea-9051-b707a8202f01",
