@@ -8,6 +8,11 @@ module.exports = {
 				"teams",
 				"skill",
 				"skillType",
+				"telephony",
+				"flow-name",
+				"flow-versions",
+				"sound",
+				"soundType",
 			];
 
 			for (let index = 0; index < collections.length; index++) {
@@ -16,6 +21,441 @@ module.exports = {
 					db.createCollection(element);
 				} catch (e) {}
 			}
+
+			try {
+				let sound = await db.collection("sound");
+				let soundType = await db.collection("soundType");
+				sound.insertMany([
+					{
+						_id: "e3d20ff3-6b8b-466c-b3b9-dce9d3618145",
+						name: "default",
+					},
+				]);
+
+				sound.insertMany([
+					{
+						_id: "b832a356-e163-4552-a898-7eb3091af629",
+						url: "https://dev-app-tenant.streamspace.ai/tenant/sounds/default_hold.wav",
+						filename: "default_hold.wav",
+						name: "hold",
+						type: "e3d20ff3-6b8b-466c-b3b9-dce9d3618145",
+						createdBy: "130ea8ce-3f0b-4d9c-b747-1b5ce093875f",
+						create_at: {
+							$date: "2022-07-27T13:55:44.552Z",
+						},
+						isDeleted: false,
+						tags: [],
+					},
+					{
+						_id: "b832a356-e163-4552-a898-7eb3091af629",
+						url: "https://dev-app-tenant.streamspace.ai/tenant/sounds/default_busy_callback.wav",
+						filename: "default_busy_callback.wav",
+						name: "hold",
+						type: "e3d20ff3-6b8b-466c-b3b9-dce9d3618145",
+						createdBy: "130ea8ce-3f0b-4d9c-b747-1b5ce093875f",
+						create_at: {
+							$date: "2022-07-27T13:55:44.552Z",
+						},
+						isDeleted: false,
+						tags: [],
+					},
+					{
+						_id: "b832a356-e163-4552-a898-7eb3091af629",
+						url: "https://dev-app-tenant.streamspace.ai/tenant/sounds/default_record_tranning.wav",
+						filename: "default_record_tranning.wav",
+						name: "hold",
+						type: "e3d20ff3-6b8b-466c-b3b9-dce9d3618145",
+						createdBy: "130ea8ce-3f0b-4d9c-b747-1b5ce093875f",
+						create_at: {
+							$date: "2022-07-27T13:55:44.552Z",
+						},
+						isDeleted: false,
+						tags: [],
+					},
+					{
+						_id: "b832a356-e163-4552-a898-7eb3091af629",
+						url: "https://dev-app-tenant.streamspace.ai/tenant/sounds/default_close_holiday.wav",
+						filename: "default_close_holiday.wav",
+						name: "hold",
+						type: "e3d20ff3-6b8b-466c-b3b9-dce9d3618145",
+						createdBy: "130ea8ce-3f0b-4d9c-b747-1b5ce093875f",
+						create_at: {
+							$date: "2022-07-27T13:55:44.552Z",
+						},
+						isDeleted: false,
+						tags: [],
+					},
+					{
+						_id: "b832a356-e163-4552-a898-7eb3091af629",
+						url: "https://dev-app-tenant.streamspace.ai/tenant/sounds/default_close.wav",
+						filename: "default_close.wav",
+						name: "hold",
+						type: "e3d20ff3-6b8b-466c-b3b9-dce9d3618145",
+						createdBy: "130ea8ce-3f0b-4d9c-b747-1b5ce093875f",
+						create_at: {
+							$date: "2022-07-27T13:55:44.552Z",
+						},
+						isDeleted: false,
+						tags: [],
+					},
+					{
+						_id: "b832a356-e163-4552-a898-7eb3091af629",
+						url: "https://dev-app-tenant.streamspace.ai/tenant/sounds/default_record.wav",
+						filename: "default_record.wav",
+						name: "hold",
+						type: "e3d20ff3-6b8b-466c-b3b9-dce9d3618145",
+						createdBy: "130ea8ce-3f0b-4d9c-b747-1b5ce093875f",
+						create_at: {
+							$date: "2022-07-27T13:55:44.552Z",
+						},
+						isDeleted: false,
+						tags: [],
+					},
+				]);
+			} catch (error) {}
+
+			try {
+				let flowName = await db.collection("flow-name");
+				let flowVersion = await db.collection("flow-versions");
+
+				flowName.insertMany([
+					{
+						_id: "817861d6-ecef-4037-8be3-645a17bf5555",
+						name: "welcome-flow",
+						update_at: {
+							$date: "2022-07-27T13:23:40.282Z",
+						},
+						create_at: {
+							$date: "2022-07-27T13:23:40.282Z",
+						},
+					},
+				]);
+
+				flowVersion.insertMany([
+					{
+						_id: "f74eb8cc-9a2a-4b14-b102-a7fec56b57de",
+						flowNameId: "817861d6-ecef-4037-8be3-645a17bf5555",
+						actions: {
+							collect: {
+								name: "IVR",
+								integrationType: "Voice",
+								integrationSubType: "VOICEBOTFS",
+								questions: [
+									{
+										question: "",
+										isNewFlow: true,
+										name: "fde33a6b-a73f-467c-baf9-5c33169eb4d7",
+										questionType: "START_CALL",
+										type: "START",
+										isFinal: false,
+										nextQuestion: [
+											"da25a08b-c367-4d8a-8ef5-422abb3648c2",
+										],
+									},
+									{
+										question: "Welocome",
+										isNewFlow: true,
+										name: "da25a08b-c367-4d8a-8ef5-422abb3648c2",
+										say: [],
+										playType: "TTS",
+										questionType: "SAY_OR_PLAY",
+										type: "text",
+										isFinal: false,
+										nextQuestion: [
+											"54290103-d206-4cf0-be59-abca5f775416",
+										],
+									},
+									{
+										question: "",
+										isNewFlow: true,
+										name: "54290103-d206-4cf0-be59-abca5f775416",
+										questionType: "DISCONNECT_CALL",
+										type: "text",
+										isFinal: true,
+										nextQuestion: [],
+									},
+								],
+							},
+						},
+						elements: [
+							{
+								position: {
+									x: 1024.5,
+									y: 238.5,
+								},
+								targetPosition: "left",
+								id: "5fcb586b-1ed8-42f7-bae2-7baadff271d9",
+								handles: [],
+								type: "START_CALL",
+								subType: "",
+								data: {
+									label: "StartCall",
+									questionType: "START_CALL",
+									questionSubType: "",
+									name: "fde33a6b-a73f-467c-baf9-5c33169eb4d7",
+									questionId:
+										"fde33a6b-a73f-467c-baf9-5c33169eb4d7",
+									questionOriginalType: "START_CALL",
+									handles: [],
+								},
+							},
+							{
+								position: {
+									x: 886,
+									y: 435,
+								},
+								targetPosition: "left",
+								id: "68245d0f-c046-4569-85a4-b0fb29783b86",
+								handles: [],
+								type: "NORMAL",
+								subType: "",
+								data: {
+									label: "Text To Speak",
+									questionType: "NORMAL",
+									questionSubType: "",
+									name: "da25a08b-c367-4d8a-8ef5-422abb3648c2",
+									questionId:
+										"da25a08b-c367-4d8a-8ef5-422abb3648c2",
+									questionOriginalType: "SAY_OR_PLAY",
+									handles: [],
+								},
+							},
+							{
+								source: "5fcb586b-1ed8-42f7-bae2-7baadff271d9",
+								sourceHandle: "sucess1",
+								target: "68245d0f-c046-4569-85a4-b0fb29783b86",
+								targetHandle: "targetTop",
+								animated: true,
+								arrowHeadType: "arrowclosed",
+								type: "buttonedge",
+								data: {
+									name: "",
+									stroke: "green",
+									currentQuestion: {
+										question: "",
+										isNewFlow: true,
+										name: "fde33a6b-a73f-467c-baf9-5c33169eb4d7",
+										questionType: "START_CALL",
+										type: "START",
+										isFinal: false,
+										nextQuestion: [
+											"da25a08b-c367-4d8a-8ef5-422abb3648c2",
+										],
+									},
+									params: {
+										source: "5fcb586b-1ed8-42f7-bae2-7baadff271d9",
+										sourceHandle: "sucess1",
+										target: "68245d0f-c046-4569-85a4-b0fb29783b86",
+										targetHandle: "targetTop",
+									},
+									elemnt: {
+										position: {
+											x: 1024.5,
+											y: 238.5,
+										},
+										targetPosition: "left",
+										id: "5fcb586b-1ed8-42f7-bae2-7baadff271d9",
+										handles: [],
+										type: "START_CALL",
+										subType: "",
+										data: {
+											label: "StartCall",
+											questionType: "START_CALL",
+											questionSubType: "",
+											name: "fde33a6b-a73f-467c-baf9-5c33169eb4d7",
+											questionId:
+												"fde33a6b-a73f-467c-baf9-5c33169eb4d7",
+											questionOriginalType: "START_CALL",
+											handles: [],
+										},
+									},
+									destinationNodeName:
+										"da25a08b-c367-4d8a-8ef5-422abb3648c2",
+								},
+								style: {
+									stroke: "green",
+									background: "red",
+								},
+								label: "Success",
+								id: "reactflow__edge-5fcb586b-1ed8-42f7-bae2-7baadff271d9sucess1-68245d0f-c046-4569-85a4-b0fb29783b86targetTop",
+							},
+							{
+								position: {
+									x: 1126,
+									y: 658,
+								},
+								targetPosition: "left",
+								id: "b9ad34bc-2949-4931-b806-485977b6d6ba",
+								handles: [],
+								type: "DISCONNECT_CALL",
+								subType: "",
+								data: {
+									label: "EndCall",
+									questionType: "DISCONNECT_CALL",
+									questionSubType: "",
+									name: "54290103-d206-4cf0-be59-abca5f775416",
+									questionId:
+										"54290103-d206-4cf0-be59-abca5f775416",
+									questionOriginalType: "DISCONNECT_CALL",
+									handles: [],
+								},
+							},
+							{
+								source: "68245d0f-c046-4569-85a4-b0fb29783b86",
+								sourceHandle: "bottomFail",
+								target: "b9ad34bc-2949-4931-b806-485977b6d6ba",
+								targetHandle: "targetTop",
+								animated: true,
+								arrowHeadType: "arrowclosed",
+								type: "buttonedge",
+								data: {
+									name: "",
+									stroke: "red",
+									currentQuestion: {
+										question: "Welocome",
+										isNewFlow: true,
+										name: "da25a08b-c367-4d8a-8ef5-422abb3648c2",
+										say: [],
+										playType: "TTS",
+										questionType: "SAY_OR_PLAY",
+										type: "text",
+										isFinal: false,
+										nextQuestion: [
+											"54290103-d206-4cf0-be59-abca5f775416",
+										],
+									},
+									params: {
+										source: "68245d0f-c046-4569-85a4-b0fb29783b86",
+										sourceHandle: "bottomFail",
+										target: "b9ad34bc-2949-4931-b806-485977b6d6ba",
+										targetHandle: "targetTop",
+									},
+									elemnt: {
+										position: {
+											x: 886,
+											y: 435,
+										},
+										targetPosition: "left",
+										id: "68245d0f-c046-4569-85a4-b0fb29783b86",
+										handles: [],
+										type: "NORMAL",
+										subType: "",
+										data: {
+											label: "Text To Speak",
+											questionType: "NORMAL",
+											questionSubType: "",
+											name: "da25a08b-c367-4d8a-8ef5-422abb3648c2",
+											questionId:
+												"da25a08b-c367-4d8a-8ef5-422abb3648c2",
+											questionOriginalType: "SAY_OR_PLAY",
+											handles: [],
+										},
+									},
+									destinationNodeName:
+										"54290103-d206-4cf0-be59-abca5f775416",
+								},
+								style: {
+									stroke: "red",
+									background: "red",
+								},
+								label: "failure",
+								id: "reactflow__edge-68245d0f-c046-4569-85a4-b0fb29783b86bottomFail-b9ad34bc-2949-4931-b806-485977b6d6batargetTop",
+							},
+						],
+						version: "b1wiMH",
+						status: true,
+						updatedBy: "130ea8ce-3f0b-4d9c-b747-1b5ce093875f",
+						update_at: {
+							$date: "2022-07-27T13:29:03.538Z",
+						},
+						create_at: {
+							$date: "2022-07-27T13:29:03.538Z",
+						},
+						tags: [],
+						isDeleted: false,
+					},
+				]);
+
+				redis.hmset(
+					`flow:${tenantId}-817861d6-ecef-4037-8be3-645a17bf5555`,
+					{
+						_id: "f74eb8cc-9a2a-4b14-b102-a7fec56b57de",
+						flowNameId: "817861d6-ecef-4037-8be3-645a17bf5555",
+						version: "b1wiMH",
+						status: "true",
+						isDeleted: "false",
+						actions:
+							'{"collect":{"name":"IVR","integrationType":"Voice","integrationSubType":"VOICEBOTFS","questions":[{"question":"","isNewFlow":true,"name":"fde33a6b-a73f-467c-baf9-5c33169eb4d7","questionType":"START_CALL","type":"START","isFinal":false,"nextQuestion":["da25a08b-c367-4d8a-8ef5-422abb3648c2"]},{"question":"Welocome","isNewFlow":true,"name":"da25a08b-c367-4d8a-8ef5-422abb3648c2","say":[],"playType":"TTS","questionType":"SAY_OR_PLAY","type":"text","isFinal":false,"nextQuestion":["54290103-d206-4cf0-be59-abca5f775416"]},{"question":"","isNewFlow":true,"name":"54290103-d206-4cf0-be59-abca5f775416","questionType":"DISCONNECT_CALL","type":"text","isFinal":true,"nextQuestion":[]}]}}',
+					},
+				);
+			} catch (error) {}
+
+			try {
+				let telephony = await db.collection("telephony");
+
+				telephony.insertMany([
+					{
+						_id: "a7e3c325-9333-4ad5-9e59-b6e12b543e63",
+						name: "Default provider",
+						isInbound: false,
+						isOutBound: true,
+						vendor: null,
+						outboundDomain: "154.27.88.207",
+						outboundProxy: "154.27.88.207",
+						outboundPort: "5092",
+						outboundUserName: "",
+						outboundPassword: "",
+						outboundRegister: false,
+						outboundPrefix: "",
+						status: true,
+						isDeleted: false,
+						mediaServer: null,
+						updatedBy: "130ea8ce-3f0b-4d9c-b747-1b5ce093875f",
+						isVerifyed: true,
+						isBilled: false,
+						prepaid: true,
+						tags: [],
+						update_at: {
+							$date: "2022-07-27T13:32:37.026Z",
+						},
+					},
+				]);
+
+				redis.hset(
+					`gateway:list:${tenantId}`,
+					"Default provider",
+					"a7e3c325-9333-4ad5-9e59-b6e12b543e63",
+				);
+
+				redis.hmset(
+					`gateway:${tenantId}-a7e3c325-9333-4ad5-9e59-b6e12b543e63`,
+					{
+						_id: "a7e3c325-9333-4ad5-9e59-b6e12b543e63",
+						name: "Default provider",
+						isInbound: false,
+						isOutBound: true,
+						vendor: null,
+						outboundDomain: "154.27.88.207",
+						outboundProxy: "154.27.88.207",
+						outboundPort: "5092",
+						outboundUserName: "",
+						outboundPassword: "",
+						outboundRegister: false,
+						outboundPrefix: "",
+						status: true,
+						isDeleted: false,
+						mediaServer: null,
+						updatedBy: "130ea8ce-3f0b-4d9c-b747-1b5ce093875f",
+						isVerifyed: true,
+						isBilled: false,
+						prepaid: true,
+						tags: [],
+						update_at: {
+							$date: "2022-07-27T13:32:37.026Z",
+						},
+					},
+				);
+			} catch (error) {}
 
 			try {
 				let pause = await db.collection("pause");
