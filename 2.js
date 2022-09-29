@@ -47,10 +47,10 @@ module.exports = {
 						tags: [],
 					},
 					{
-						_id: "b832a356-e163-4552-a898-7eb3091af629",
+						_id: "b832a356-e163-4552-a898-7eb3091af630",
 						url: "https://dev-app-tenant.streamspace.ai/tenant/sounds/default_busy_callback.wav",
 						filename: "default_busy_callback.wav",
-						name: "hold",
+						name: "call-back",
 						type: "e3d20ff3-6b8b-466c-b3b9-dce9d3618145",
 						createdBy: "130ea8ce-3f0b-4d9c-b747-1b5ce093875f",
 						create_at: {
@@ -60,10 +60,10 @@ module.exports = {
 						tags: [],
 					},
 					{
-						_id: "b832a356-e163-4552-a898-7eb3091af629",
+						_id: "b832a356-e163-4552-a898-7eb3091af631",
 						url: "https://dev-app-tenant.streamspace.ai/tenant/sounds/default_record_tranning.wav",
 						filename: "default_record_tranning.wav",
-						name: "hold",
+						name: "default_record_tranning",
 						type: "e3d20ff3-6b8b-466c-b3b9-dce9d3618145",
 						createdBy: "130ea8ce-3f0b-4d9c-b747-1b5ce093875f",
 						create_at: {
@@ -73,10 +73,10 @@ module.exports = {
 						tags: [],
 					},
 					{
-						_id: "b832a356-e163-4552-a898-7eb3091af629",
+						_id: "b832a356-e163-4552-a898-7eb3091af639",
 						url: "https://dev-app-tenant.streamspace.ai/tenant/sounds/default_close_holiday.wav",
 						filename: "default_close_holiday.wav",
-						name: "hold",
+						name: "default_close_holiday",
 						type: "e3d20ff3-6b8b-466c-b3b9-dce9d3618145",
 						createdBy: "130ea8ce-3f0b-4d9c-b747-1b5ce093875f",
 						create_at: {
@@ -86,10 +86,10 @@ module.exports = {
 						tags: [],
 					},
 					{
-						_id: "b832a356-e163-4552-a898-7eb3091af629",
+						_id: "b832a356-e163-4552-a898-7eb3091af649",
 						url: "https://dev-app-tenant.streamspace.ai/tenant/sounds/default_close.wav",
 						filename: "default_close.wav",
-						name: "hold",
+						name: "default_close",
 						type: "e3d20ff3-6b8b-466c-b3b9-dce9d3618145",
 						createdBy: "130ea8ce-3f0b-4d9c-b747-1b5ce093875f",
 						create_at: {
@@ -99,10 +99,10 @@ module.exports = {
 						tags: [],
 					},
 					{
-						_id: "b832a356-e163-4552-a898-7eb3091af629",
+						_id: "b832a356-e163-4552-a898-7eb3091af659",
 						url: "https://dev-app-tenant.streamspace.ai/tenant/sounds/default_record.wav",
 						filename: "default_record.wav",
-						name: "hold",
+						name: "default_record",
 						type: "e3d20ff3-6b8b-466c-b3b9-dce9d3618145",
 						createdBy: "130ea8ce-3f0b-4d9c-b747-1b5ce093875f",
 						create_at: {
@@ -672,7 +672,7 @@ module.exports = {
 						},
 						config: {},
 						externalTeams: [],
-						contactLists: [],
+						contactLists: ["fa29352a-a238-4b20-bc08-0718d3f5985a"],
 						timeOut: 0,
 						ctiUrl: null,
 						webhookUrl: null,
@@ -696,7 +696,8 @@ module.exports = {
 						update_at: '"2022-07-26T07:56:11.008Z"',
 						config: "{}",
 						externalTeams: "[]",
-						contactLists: "[]",
+						contactLists:
+							"['fa29352a-a238-4b20-bc08-0718d3f5985a']",
 						timeOut: "0",
 						ctiUrl: "",
 						webhookUrl: "",
